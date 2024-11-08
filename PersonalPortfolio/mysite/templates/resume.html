@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume - My Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li><a href="{%url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li class="has-flyout">
+                    <a href="{% url 'projects' %}">Projects</a>
+                    <ul class="flyout-menu">
+                        <li><a href="{% url 'projects' %}#project1">Project 1</a></li>
+                        <li><a href="{% url 'projects' %}#project2">Project 2</a></li>
+                        <li><a href="{% url 'projects' %}#project3">Project 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h1>My Resume</h1>
+            <h2>John Hurtubise</h2>
+            <h3>Software Developer</h3>
+            <p>
+                Passionate software developer with experience in backend development, web applications, and database management.
+            </p>
+
+            <h2>Work Experience</h2>
+            <h3>Software Developer at XYZ Company</h3>
+            <p><em>June 2021 - Present</em></p>
+            <ul>
+                <li>Developed and maintained web applications using Django and React.</li>
+                <li>Collaborated with cross-functional teams to design scalable solutions.</li>
+                <li>Implemented RESTful APIs and integrated third-party services.</li>
+            </ul>
+
+            <h2>Education</h2>
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p><em>ABC University, 2017 - 2021</em></p>
+            <ul>
+                <li>GPA: 3.8/4.0</li>
+                <li>Relevant Coursework: Data Structures, Algorithms, Database Systems, Web Development</li>
+            </ul>
+
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming Languages: Python, JavaScript, Java, C++</li>
+                <li>Web Frameworks: Django, Flask, React</li>
+                <li>Databases: PostgreSQL, MySQL</li>
+                <li>Tools: Git, Docker, AWS</li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+</html>

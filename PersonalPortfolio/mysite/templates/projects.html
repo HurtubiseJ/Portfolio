@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects - My Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li><a href="{%url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'resume' %}">Resume</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h1>My Projects</h1>
+
+            <section id="project1">
+                <h2>Project 1: Automated Web Scraper</h2>
+                <p>
+                    Developed a Python-based web scraper using Selenium to collect data from dynamic websites. Implemented data parsing and storage in a structured format for analysis.
+                </p>
+                <p>
+                    <strong>Technologies Used:</strong> Python, Selenium, Pandas
+                </p>
+                <p>
+                    <a href="https://github.com/yourusername/project1" target="_blank">View Project on GitHub</a>
+                </p>
+            </section>
+
+            <section id="project2">
+                <h2>Project 2: Django Web Application</h2>
+                <p>
+                    Built a full-stack web application using Django for the backend and Bootstrap for the frontend. Features user authentication, CRUD operations, and RESTful APIs.
+                </p>
+                <p>
+                    <strong>Technologies Used:</strong> Django, HTML, CSS, JavaScript, Bootstrap
+                </p>
+                <p>
+                    <a href="https://github.com/yourusername/project2" target="_blank">View Project on GitHub</a>
+                </p>
+            </section>
+
+            <section id="project3">
+                <h2>Project 3: Data Visualization Dashboard</h2>
+                <p>
+                    Created an interactive dashboard to visualize large datasets using Plotly and Dash. Implemented filters and real-time data updates to enhance user experience.
+                </p>
+                <p>
+                    <strong>Technologies Used:</strong> Python, Plotly, Dash
+                </p>
+                <p>
+                    <a href="https://github.com/yourusername/project3" target="_blank">View Project on GitHub</a>
+                </p>
+            </section>
+        </div>
+    </div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        if (window.location.hash) {
+            setTimeout(function() {
+                const element = document.querySelector(window.location.hash);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 0);
+        }
+    });
+    </script>
+    
+</html>

@@ -5,20 +5,26 @@
 <head>
     <meta charset="UTF-8">
     <title>My Portfolio</title>
-    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="navigation">
             <ul>
-                <li><a href="{% url 'resume' %}">Resume</a></li>
-                <li><a href="{% url 'projects' %}">Projects</a></li>
                 <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'resume' %}">Resume</a></li>
+                <li class="has-flyout">
+                    <a href="{% url 'projects' %}">Projects</a>
+                    <ul class="flyout-menu">
+                        <li><a href="{% url 'projects' %}#project1">Project 1</a></li>
+                        <li><a href="{% url 'projects' %}#project2">Project 2</a></li>
+                        <li><a href="{% url 'projects' %}#project3">Project 3</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
+
         <div class="main-content">
             <h1>John Hurtubise</h1>
             <h2>Software Developer</h2>

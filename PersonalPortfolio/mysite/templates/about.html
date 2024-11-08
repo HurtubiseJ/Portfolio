@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - My Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li><a href="{%url 'index' %}">Home</a></li>
+                <li><a href="{% url 'resume' %}">Resume</a></li>
+                <li class="has-flyout">
+                    <a href="{% url 'projects' %}">Projects</a>
+                    <ul class="flyout-menu">
+                        <li><a href="{% url 'projects' %}#project1">Project 1</a></li>
+                        <li><a href="{% url 'projects' %}#project2">Project 2</a></li>
+                        <li><a href="{% url 'projects' %}#project3">Project 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h1>About Me</h1>
+            <p>Hello! I'm John Hurtubise, a passionate software developer specializing in backend development and web applications. Welcome to my portfolio website.</p>
+
+            <h2>Background</h2>
+            <p>
+                I graduated with a degree in Computer Science from XYZ University. Over the years, I've worked on various projects involving web development, data analysis, and automation.
+            </p>
+
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming Languages: Python, JavaScript, Java, C++</li>
+                <li>Web Frameworks: Django, Flask, React</li>
+                <li>Databases: SQL Server, PostgreSQL, MySQL</li>
+                <li>Tools & Technologies: Docker, Git, Selenium, AWS</li>
+            </ul>
+
+            <h2>Interests</h2>
+            <p>
+                In my free time, I enjoy contributing to open-source projects, exploring new technologies, and hiking in the great outdoors.
+            </p>
+
+            <h2>Contact</h2>
+            <p>
+                Feel free to <a href="mailto:your.email@example.com">reach out via email</a> or connect with me on <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
